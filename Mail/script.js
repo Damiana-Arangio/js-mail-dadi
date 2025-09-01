@@ -11,3 +11,39 @@
 
 */
 
+// DEFINIZIONE VARIABILI
+
+  // Creazione array lista email
+  const listaInvitati = [
+    "pippo@gmail.com", 
+    "pluto@gmail.com" , 
+    "paperino@gmail.com", 
+    "marco.rossi@gmail.com" ,
+    "francescobianchi.gmail.com" ];
+
+    // Flag per tenere traccia dello stato dell'email (trovato - non trovato)
+    let emailTrovata = false;
+
+
+// INPUT: richiesta inserimento email (utente)
+const emailUser = prompt("Inserisci la tua email");
+
+// ELABORAZIONE
+for (let i = 0; i < listaInvitati.length ; i++) {
+
+  if (emailUser === listaInvitati[i]) {
+      emailTrovata = true;
+      break; // interrompi ciclo
+    }
+
+  }
+
+// OUTPUT
+if (emailTrovata) {
+  alert("✅ Accesso riuscito: Benvenuto alla festa!");
+}
+
+else {
+  alert("❌ Accesso negato: la tua email non è presente nella lista!");
+}
+
