@@ -29,7 +29,7 @@
 const emailUser = prompt("Inserisci la tua email");
 
 // ELABORAZIONE
-for (let i = 0; i < listaInvitati.length ; i++) {
+for (let i = 0; i < listaInvitati.length /* && !notemailTrovata al posto di brak */; i++) {
 
   if (emailUser === listaInvitati[i]) {
       emailTrovata = true;
